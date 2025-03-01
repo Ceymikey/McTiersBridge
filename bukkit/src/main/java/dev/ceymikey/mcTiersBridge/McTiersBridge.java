@@ -43,6 +43,7 @@ public final class McTiersBridge extends JavaPlugin implements Listener {
     @Override
     public void onEnable() {
         instance = this;
+        getLogger().info("Registering hooks and managers..");
         if (Bukkit.getPluginManager().getPlugin("PlaceholderAPI") != null) {
             Bukkit.getPluginManager().registerEvents(this, this);
         } else {
@@ -50,6 +51,7 @@ public final class McTiersBridge extends JavaPlugin implements Listener {
             Bukkit.getPluginManager().disablePlugin(this);
         }
 
+        getLogger().info("Registering types and API...");
         registerTypes();
         /* Here we safely register the API. */
         McTiersBridgeAPI.setInstance(new TierBridge());

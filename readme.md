@@ -24,19 +24,31 @@ dependencies {
 - `%TierBridge_points_{player}%` - Returns the overall points of the player.
 
 ## Compatibility
+✅ = Compatible
+
+🔴 = Not compatible
+
+🟠 = Unknown
+
+
 | Server software                                           | Version | Supported |
 |-----------------------------------------------------------|---------|-----------|
-| [Papermc](https://github.com/PaperMC/Paper)               | 1.19.-  | 🔴        |
-|                                                           | 1.20    | 🔴        |
-|                                                           | 1.20.2  | 🔴        |
-|                                                           | 1.20.4  | ✅         |
-|                                                           | 1.20.6  | 🔴        | 
-|                                                           | 1.21.+  | 🔴        |
-| [Pufferfish](https://github.com/pufferfish-gg/Pufferfish) | Any     | 🔴        |
-| Anything else?                                            | Any     | 🔴        |
+| [Papermc](https://github.com/PaperMC/Paper)               | 1.16-   | 🔴        |
+|                                                           | 1.16+   | ✅         |
+|                                                           | 1.17+   | ✅         |
+|                                                           | 1.19+   | ✅         |
+|                                                           | 1.20+   | ✅         |
+|                                                           | 1.21+   | ✅         |
+| [Pufferfish](https://github.com/pufferfish-gg/Pufferfish) | Any     | 🟠        |
+| Proxies                                                   | Any     | 🔴        |
+| Anything else?                                            | Any     | 🟠        |
 
-| Server proxies                                       | Version | Supported |
-|------------------------------------------------------|---------|-----------|
-| [Velocity](https://github.com/PaperMC/Velocity)      | Any     | 🔴        |
-| [Waterfall](https://github.com/PaperMC/Waterfall)    | Any     | 🔴        |
-| [Bungeecord](https://github.com/SpigotMC/BungeeCord) | Any     | 🔴        |
+[//]: # (| Server proxies                                       | Version | Supported |)
+
+[//]: # (|------------------------------------------------------|---------|-----------|)
+
+[//]: # (| [Velocity]&#40;https://github.com/PaperMC/Velocity&#41;      | Any     | 🔴        |)
+
+[//]: # (| [Waterfall]&#40;https://github.com/PaperMC/Waterfall&#41;    | Any     | 🔴        |)
+
+[//]: # (| [Bungeecord]&#40;https://github.com/SpigotMC/BungeeCord&#41; | Any     | 🔴        |)

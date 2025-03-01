@@ -25,6 +25,7 @@
 package dev.ceymikey.mcTiersBridge.placeholders;
 
 import lombok.Getter;
+import org.bukkit.OfflinePlayer;
 
 @Getter
 public abstract class Holder {
@@ -37,7 +38,7 @@ public abstract class Holder {
         }
     }
 
-    public abstract String process(String[] args);
+    public abstract String process(OfflinePlayer player, String[] args);
 
     public String getName() {
         return data.name();

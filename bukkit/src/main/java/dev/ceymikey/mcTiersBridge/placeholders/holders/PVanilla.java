@@ -29,6 +29,7 @@ import dev.ceymikey.mcTiersBridge.placeholders.Placeholder;
 import dev.ceymikey.mcTiersBridge.util.TierBridge;
 import dev.ceymikey.mcTiersBridge.util.Types;
 import org.bukkit.Bukkit;
+import org.bukkit.OfflinePlayer;
 import org.bukkit.entity.Player;
 
 @Placeholder(
@@ -36,8 +37,18 @@ import org.bukkit.entity.Player;
 )
 public class PVanilla extends Holder {
     @Override
-    public String process(String[] args) {
+    public String process(OfflinePlayer player, String[] args) {
         TierBridge bridge = new TierBridge();
+        if (args.length == 1) {
+            try {
+                Object tier = bridge.getData(String.valueOf(player.getName()), Types.VANILLA);
+                Object pos = bridge.getData(String.valueOf(player.getName()), Types.POSITION);
+                return pos + "" + tier;
+            } catch (Exception e) {
+                e.printStackTrace();
+                return "ERROR";
+            }
+        }
         Player targetPlayer = Bukkit.getPlayerExact(args[1]);
         if (targetPlayer != null) {
             try {

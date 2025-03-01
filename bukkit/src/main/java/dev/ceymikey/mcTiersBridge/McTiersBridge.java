@@ -36,8 +36,10 @@ import org.bukkit.plugin.java.JavaPlugin;
 
 public final class McTiersBridge extends JavaPlugin implements Listener {
 
-    @Getter private JavaPlugin instance;
-    private Metrics metrics;
+    @Getter private static McTiersBridge instance;
+    @Getter private static String AUTHOR = "Ceymikey";
+    @Getter private static String VERSION = "1.0.0";
+    private static Metrics metrics;
     private static final int pluginId = 23667;
 
     @Override
@@ -71,5 +73,12 @@ public final class McTiersBridge extends JavaPlugin implements Listener {
         TypeRegistry.register("position", Types.POSITION);
         TypeRegistry.register("points", Types.POINTS);
         TypeRegistry.register("region", Types.REGION);
+    }
+
+    public static McTiersBridge i() {
+        if (instance == null) {
+            instance = new McTiersBridge();
+        }
+        return instance;
     }
 }

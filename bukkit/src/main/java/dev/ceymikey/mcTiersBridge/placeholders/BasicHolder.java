@@ -69,7 +69,7 @@ public class BasicHolder extends PlaceholderExpansion {
         String[] args = params.split("_");
         for (int i = 0; i < subHolder.size(); i++) {
             if (args[0].equalsIgnoreCase(subHolder.get(i).getName())) {
-                return subHolder.get(i).process(args);
+                return subHolder.get(i).process(player, args);
             }
         }
         return null;

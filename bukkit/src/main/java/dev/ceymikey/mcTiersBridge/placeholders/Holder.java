@@ -1,7 +1,7 @@
 /*
  * This file is part of McTiersBridge, https://github.com/Ceymikey/McTiersBridge
  *
- * Copyright (c) 2024 Ceymikeydev and contributors
+ * Copyright (c) 2024-2025 Ceymikeydev and contributors
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -21,7 +21,6 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
  * SOFTWARE.
  */
-
 package dev.ceymikey.mcTiersBridge.placeholders;
 
 import lombok.Getter;

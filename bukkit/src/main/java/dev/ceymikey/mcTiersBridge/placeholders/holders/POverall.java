@@ -39,6 +39,15 @@ public class POverall extends Holder {
     @Override
     public String process(OfflinePlayer player, String[] args) {
         TierBridge bridge = new TierBridge();
+        if (args.length == 1) {
+            try {
+                Object overall = bridge.getData(player.getName(), Types.OVERALL);
+                return String.valueOf(overall);
+            } catch (Exception e) {
+                e.printStackTrace();
+                return "ERROR_400";
+            }
+        }
         Player targetPlayer = Bukkit.getPlayerExact(args[1]);
         if (targetPlayer != null) {
             try {

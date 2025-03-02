@@ -39,6 +39,15 @@ public class PPoints extends Holder {
     @Override
     public String process(OfflinePlayer player, String[] args) {
         TierBridge bridge = new TierBridge();
+        if (args.length == 1) {
+            try {
+                Object points = bridge.getData(player.getName(), Types.POINTS);
+                return String.valueOf(points);
+            } catch (Exception e) {
+                e.printStackTrace();
+                return "ERROR_400";
+            }
+        }
         Player targetPlayer = Bukkit.getPlayerExact(args[1]);
         if (targetPlayer != null) {
             try {

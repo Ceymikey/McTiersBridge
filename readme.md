@@ -18,6 +18,9 @@ dependencies {
 ```
 
 ## Placeholders
+Raw example:
+`%TierBridge_vanilla%` - Returns the vanilla tier of the player without player parameter.
+
 - `%TierBridge_vanilla_{player}%` - Returns the vanilla tier of the player.
 - `%TierBridge_overall_{player}%` - Returns the overall rank of the player.
 - `%TierBridge_region_{player}%` - Returns the region of the player.

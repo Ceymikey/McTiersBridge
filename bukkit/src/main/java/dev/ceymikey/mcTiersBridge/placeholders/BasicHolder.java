@@ -65,12 +65,20 @@ public class BasicHolder extends PlaceholderExpansion {
 
     @Override
     public String onRequest(OfflinePlayer player, String params) {
-        String[] args = params.split("_");
-        for (int i = 0; i < subHolder.size(); i++) {
-            if (args[0].equalsIgnoreCase(subHolder.get(i).getName())) {
-                return subHolder.get(i).process(player, args);
+        int index = params.indexOf('_');
+        if (index == -1) {
+            return null;
+        }
+
+        String placeholderType = params.substring(0, index);
+        String username = params.substring(index + 1);
+
+        for (Holder holder : subHolder) {
+            if (placeholderType.equalsIgnoreCase(holder.getName())) {
+                return holder.process(player, new String[]{placeholderType, username});
             }
         }
         return null;
     }
+
 }

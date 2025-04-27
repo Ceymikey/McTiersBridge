@@ -4,7 +4,7 @@ plugins {
 }
 
 group = 'dev.ceymikey'
-version = '1.0.0'
+version = '1.0.1'
 
 allprojects {
     apply plugin: 'java'
@@ -24,6 +24,14 @@ allprojects {
 
         annotationProcessor 'org.jetbrains:annotations:26.0.0'
         annotationProcessor 'org.projectlombok:lombok:1.18.34'
+    }
+
+    processResources {
+        filesMatching('plugin.yml') {
+            expand(
+                    version: project.version
+            )
+        }
     }
 }
 

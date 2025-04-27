@@ -33,15 +33,15 @@ import org.bukkit.OfflinePlayer;
 import org.bukkit.entity.Player;
 
 @Placeholder(
-        name = "vanilla"
+        name = "pot"
 )
-public class PVanilla extends Holder {
+public class PPot extends Holder {
     @Override
     public String process(OfflinePlayer player, String[] args) {
         TierBridge bridge = new TierBridge();
         if (args.length == 1) {
             try {
-                Object tier = bridge.getData(String.valueOf(player.getName()), Types.VANILLA);
+                Object tier = bridge.getData(String.valueOf(player.getName()), Types.POT);
                 Object pos = bridge.getData(String.valueOf(player.getName()), Types.POSITION);
                 return pos + "" + tier;
             } catch (Exception e) {
@@ -51,7 +51,7 @@ public class PVanilla extends Holder {
         Player targetPlayer = Bukkit.getPlayerExact(args[1]);
         if (targetPlayer != null) {
             try {
-                Object tier = bridge.getData(args[1], Types.VANILLA);
+                Object tier = bridge.getData(args[1], Types.POT);
                 Object pos = bridge.getData(args[1], Types.POSITION);
                 return pos + "" + tier;
             } catch (Exception e) {

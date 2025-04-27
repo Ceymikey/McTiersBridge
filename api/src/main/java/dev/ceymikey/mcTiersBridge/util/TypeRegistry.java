@@ -32,6 +32,8 @@ import java.util.concurrent.ConcurrentHashMap;
 @UtilityClass
 public class TypeRegistry {
     public static final Types VANILLA = get("vanilla");
+    public static final Types SWORD = get("sword");
+    public static final Types POT = get("pot");
     public static final Types OVERALL = get("overall");
     public static final Types POSITION = get("position");
     public static final Types POINTS = get("points");

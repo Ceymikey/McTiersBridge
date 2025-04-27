@@ -25,6 +25,7 @@ package dev.ceymikey.mcTiersBridge.placeholders.holders;
 
 import dev.ceymikey.mcTiersBridge.placeholders.Holder;
 import dev.ceymikey.mcTiersBridge.placeholders.Placeholder;
+import dev.ceymikey.mcTiersBridge.util.MessageUtil;
 import dev.ceymikey.mcTiersBridge.util.TierBridge;
 import dev.ceymikey.mcTiersBridge.util.Types;
 import org.bukkit.Bukkit;
@@ -43,8 +44,7 @@ public class PRegion extends Holder {
                 Object region = bridge.getData(player.getName(), Types.REGION);
                 return String.valueOf(region);
             } catch (Exception e) {
-                e.printStackTrace();
-                return "ERROR_400";
+                return MessageUtil.get().NOT_FOUND;
             }
         }
         Player targetPlayer = Bukkit.getPlayerExact(args[1]);
@@ -53,8 +53,7 @@ public class PRegion extends Holder {
                 Object region = bridge.getData(args[1], Types.REGION);
                 return String.valueOf(region);
             } catch (Exception e) {
-                e.printStackTrace();
-                return "ERROR_400";
+                return MessageUtil.get().NOT_FOUND;
             }
         }
         return null;

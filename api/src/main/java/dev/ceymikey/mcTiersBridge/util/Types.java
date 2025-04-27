@@ -38,6 +38,22 @@ public abstract class Types {
             return vanilla.get("tier").getAsInt();
         }
     };
+    public static Types SWORD = new Types() {
+        @Override
+        public Object getTier(JsonObject jsonObject) {
+            JsonObject rankings = jsonObject.getAsJsonObject("rankings");
+            JsonObject economy = rankings.getAsJsonObject("sword");
+            return economy.get("tier").getAsInt();
+        }
+    };
+    public static Types POT = new Types() {
+        @Override
+        public Object getTier(JsonObject jsonObject) {
+            JsonObject rankings = jsonObject.getAsJsonObject("rankings");
+            JsonObject economy = rankings.getAsJsonObject("pot");
+            return economy.get("tier").getAsInt();
+        }
+    };
     public static Types OVERALL = new Types() {
         @Override
         public Object getTier(JsonObject jsonObject) {

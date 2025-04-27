@@ -25,6 +25,7 @@ package dev.ceymikey.mcTiersBridge.placeholders.holders;
 
 import dev.ceymikey.mcTiersBridge.placeholders.Holder;
 import dev.ceymikey.mcTiersBridge.placeholders.Placeholder;
+import dev.ceymikey.mcTiersBridge.util.MessageUtil;
 import dev.ceymikey.mcTiersBridge.util.TierBridge;
 import dev.ceymikey.mcTiersBridge.util.Types;
 import org.bukkit.Bukkit;
@@ -43,8 +44,7 @@ public class PPoints extends Holder {
                 Object points = bridge.getData(player.getName(), Types.POINTS);
                 return String.valueOf(points);
             } catch (Exception e) {
-                e.printStackTrace();
-                return "ERROR_400";
+                return MessageUtil.get().NOT_FOUND;
             }
         }
         Player targetPlayer = Bukkit.getPlayerExact(args[1]);
@@ -53,8 +53,7 @@ public class PPoints extends Holder {
                 Object points = bridge.getData(args[1], Types.POINTS);
                 return String.valueOf(points);
             } catch (Exception e) {
-                e.printStackTrace();
-                return "ERROR_400";
+                return MessageUtil.get().NOT_FOUND;
             }
         }
         return null;

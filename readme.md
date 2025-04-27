@@ -26,6 +26,14 @@ Raw example:
 - `%TierBridge_region_{player}%` - Returns the region of the player.
 - `%TierBridge_points_{player}%` - Returns the overall points of the player.
 
+## Available types
+- `vanilla` - Vanilla tier
+- `sword` - Sword tier
+- `pot` - Pot tier
+- `overall` - Overall rank
+- `region` - Region
+- `points` - Overall points
+
 ## Compatibility
 ✅ = Compatible
 

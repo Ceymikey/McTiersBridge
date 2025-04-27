@@ -23,10 +23,8 @@
  */
 package dev.ceymikey.mcTiersBridge.placeholders;
 
-import dev.ceymikey.mcTiersBridge.placeholders.holders.PPoints;
-import dev.ceymikey.mcTiersBridge.placeholders.holders.PRegion;
-import dev.ceymikey.mcTiersBridge.placeholders.holders.PVanilla;
-import dev.ceymikey.mcTiersBridge.placeholders.holders.POverall;
+import dev.ceymikey.mcTiersBridge.McTiersBridge;
+import dev.ceymikey.mcTiersBridge.placeholders.holders.*;
 import me.clip.placeholderapi.expansion.PlaceholderExpansion;
 import org.bukkit.OfflinePlayer;
 import org.jetbrains.annotations.NotNull;
@@ -38,6 +36,8 @@ public class BasicHolder extends PlaceholderExpansion {
 
     public BasicHolder() {
         subHolder.add(new PVanilla());
+        subHolder.add(new PSword());
+        subHolder.add(new PPot());
         subHolder.add(new POverall());
         subHolder.add(new PPoints());
         subHolder.add(new PRegion());
@@ -50,12 +50,12 @@ public class BasicHolder extends PlaceholderExpansion {
 
     @Override
     public @NotNull String getAuthor() {
-        return "Ceymikey";
+        return McTiersBridge.getAUTHOR();
     }
 
     @Override
     public @NotNull String getVersion() {
-        return "V++";
+        return McTiersBridge.getVERSION();
     }
 
     @Override

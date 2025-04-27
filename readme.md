@@ -13,7 +13,7 @@ repositories {
 }
 
 dependencies {
-    implementation "dev.ceymikey:mctiersbridge-api:1.0.0"
+    implementation "dev.ceymikey:mctiersbridge-api:1.0.2"
 }
 ```
 

@@ -40,7 +40,7 @@ public class PUhc extends Holder {
         if (args.length == 1) {
             try {
                 Object tier = bridge.getData(String.valueOf(player.getName()), Types.UHC);
-                Object pos = bridge.getData(String.valueOf(player.getName()), Types.POSITION);
+                Object pos = bridge.getData(String.valueOf(player.getName()), Types.getPositionForMode("uhc"));
                 return pos + "" + tier;
             } catch (Exception e) {
                 return MessageUtil.get().NOT_FOUND;
@@ -50,7 +50,7 @@ public class PUhc extends Holder {
         if (targetPlayer != null) {
             try {
                 Object tier = bridge.getData(args[1], Types.UHC);
-                Object pos = bridge.getData(args[1], Types.POSITION);
+                Object pos = bridge.getData(args[1], Types.getPositionForMode("uhc"));
                 return pos + "" + tier;
             } catch (Exception e) {
                 return MessageUtil.get().NOT_FOUND;

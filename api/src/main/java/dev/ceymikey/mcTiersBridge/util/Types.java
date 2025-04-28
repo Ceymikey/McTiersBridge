@@ -89,9 +89,34 @@ public abstract class Types {
         }
     };
     /**
-     * This type is a little bit different this gets your tiers position value
-     * rather than the tier value as an int (ht - Hight tier. lt - Low tier)
+     * Factory method to create a position type for a specific game mode
+     * @param gameMode The game mode to get position for (vanilla, sword, pot, uhc, smp)
+     * @return A Types instance that gets position for the specified game mode
      */
+    public static Types getPositionForMode(String gameMode) {
+        return new Types() {
+            @Override
+            public Object getTier(JsonObject jsonObject) {
+                JsonObject rankings = jsonObject.getAsJsonObject("rankings");
+                JsonObject modeData = rankings.getAsJsonObject(gameMode);
+                int pos = modeData.get("pos").getAsInt();
+                switch (pos) {
+                    case 0:
+                        return "ht";
+                    case 1:
+                        return "lt";
+                    default:
+                        return "Unknown tier";
+                }
+            }
+        };
+    }
+
+    /**
+     * Legacy position type that defaults to vanilla
+     * @deprecated Use getPositionForMode("vanilla") instead
+     */
+    @Deprecated
     public static Types POSITION = new Types() {
         @Override
         public Object getTier(JsonObject jsonObject) {

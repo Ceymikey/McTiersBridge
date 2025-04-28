@@ -40,7 +40,7 @@ public class PSmp extends Holder {
         if (args.length == 1) {
             try {
                 Object tier = bridge.getData(String.valueOf(player.getName()), Types.SMP);
-                Object pos = bridge.getData(String.valueOf(player.getName()), Types.POSITION);
+                Object pos = bridge.getData(String.valueOf(player.getName()), Types.getPositionForMode("smp"));
                 return pos + "" + tier;
             } catch (Exception e) {
                 return MessageUtil.get().NOT_FOUND;
@@ -50,7 +50,7 @@ public class PSmp extends Holder {
         if (targetPlayer != null) {
             try {
                 Object tier = bridge.getData(args[1], Types.SMP);
-                Object pos = bridge.getData(args[1], Types.POSITION);
+                Object pos = bridge.getData(String.valueOf(player.getName()), Types.getPositionForMode("smp"));
                 return pos + "" + tier;
             } catch (Exception e) {
                 return MessageUtil.get().NOT_FOUND;

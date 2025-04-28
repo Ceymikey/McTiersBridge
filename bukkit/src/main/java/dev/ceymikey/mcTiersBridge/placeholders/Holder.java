@@ -40,6 +40,6 @@ public abstract class Holder {
     public abstract String process(OfflinePlayer player, String[] args);
 
     public String getName() {
-        return data.name();
+        return data.identifier();
     }
 }

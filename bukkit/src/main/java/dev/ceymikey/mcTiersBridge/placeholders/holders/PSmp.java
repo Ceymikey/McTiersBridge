@@ -32,15 +32,16 @@ import org.bukkit.Bukkit;
 import org.bukkit.OfflinePlayer;
 import org.bukkit.entity.Player;
 
-@Placeholder(identifier = "overall")
-public class POverall extends Holder {
+@Placeholder(identifier = "smp")
+public class PSmp extends Holder {
     @Override
     public String process(OfflinePlayer player, String[] args) {
         TierBridge bridge = new TierBridge();
         if (args.length == 1) {
             try {
-                Object overall = bridge.getData(player.getName(), Types.OVERALL);
-                return String.valueOf(overall);
+                Object tier = bridge.getData(String.valueOf(player.getName()), Types.SMP);
+                Object pos = bridge.getData(String.valueOf(player.getName()), Types.POSITION);
+                return pos + "" + tier;
             } catch (Exception e) {
                 return MessageUtil.get().NOT_FOUND;
             }
@@ -48,8 +49,9 @@ public class POverall extends Holder {
         Player targetPlayer = Bukkit.getPlayerExact(args[1]);
         if (targetPlayer != null) {
             try {
-                Object overall = bridge.getData(args[1], Types.OVERALL);
-                return String.valueOf(overall);
+                Object tier = bridge.getData(args[1], Types.SMP);
+                Object pos = bridge.getData(args[1], Types.POSITION);
+                return pos + "" + tier;
             } catch (Exception e) {
                 return MessageUtil.get().NOT_FOUND;
             }

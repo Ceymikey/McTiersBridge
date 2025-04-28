@@ -32,9 +32,7 @@ import org.bukkit.Bukkit;
 import org.bukkit.OfflinePlayer;
 import org.bukkit.entity.Player;
 
-@Placeholder(
-        name = "region"
-)
+@Placeholder(identifier = "region")
 public class PRegion extends Holder {
     @Override
     public String process(OfflinePlayer player, String[] args) {

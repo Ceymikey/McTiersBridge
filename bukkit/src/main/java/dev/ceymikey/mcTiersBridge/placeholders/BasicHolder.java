@@ -38,6 +38,8 @@ public class BasicHolder extends PlaceholderExpansion {
         subHolder.add(new PVanilla());
         subHolder.add(new PSword());
         subHolder.add(new PPot());
+        subHolder.add(new PUhc());
+        subHolder.add(new PSmp());
         subHolder.add(new POverall());
         subHolder.add(new PPoints());
         subHolder.add(new PRegion());

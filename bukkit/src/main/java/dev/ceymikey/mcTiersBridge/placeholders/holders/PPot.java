@@ -32,9 +32,7 @@ import org.bukkit.Bukkit;
 import org.bukkit.OfflinePlayer;
 import org.bukkit.entity.Player;
 
-@Placeholder(
-        name = "pot"
-)
+@Placeholder(identifier = "pot")
 public class PPot extends Holder {
     @Override
     public String process(OfflinePlayer player, String[] args) {

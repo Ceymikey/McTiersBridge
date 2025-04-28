@@ -30,6 +30,8 @@ Raw example:
 - `vanilla` - Vanilla tier
 - `sword` - Sword tier
 - `pot` - Pot tier
+- `uhc` - uhc tier
+- `smp` - smp tier
 - `overall` - Overall rank
 - `region` - Region
 - `points` - Overall points

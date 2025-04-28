@@ -54,6 +54,22 @@ public abstract class Types {
             return economy.get("tier").getAsInt();
         }
     };
+    public static Types UHC = new Types() {
+        @Override
+        public Object getTier(JsonObject jsonObject) {
+            JsonObject rankings = jsonObject.getAsJsonObject("rankings");
+            JsonObject economy = rankings.getAsJsonObject("uhc");
+            return economy.get("tier").getAsInt();
+        }
+    };
+    public static Types SMP = new Types() {
+        @Override
+        public Object getTier(JsonObject jsonObject) {
+            JsonObject rankings = jsonObject.getAsJsonObject("rankings");
+            JsonObject economy = rankings.getAsJsonObject("smp");
+            return economy.get("tier").getAsInt();
+        }
+    };
     public static Types OVERALL = new Types() {
         @Override
         public Object getTier(JsonObject jsonObject) {

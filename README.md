@@ -36,7 +36,7 @@ Raw example:
 - `pot` - Pot tier
 - `uhc` - uhc tier
 - `smp` - smp tier
-- 'nethop' - NetheriteOP tier
+- `nethop` - NetheriteOP tier
 - `overall` - Overall rank
 - `region` - Region
 - `points` - Overall points

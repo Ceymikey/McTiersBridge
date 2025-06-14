@@ -36,6 +36,7 @@ public class TypeRegistry {
     public static final Types POT = get("pot");
     public static final Types UHC = get("uhc");
     public static final Types SMP = get("smp");
+    public static final Types NETHOP = get("nethop");
     public static final Types OVERALL = get("overall");
     public static final Types POSITION = get("position");
     public static final Types POINTS = get("points");

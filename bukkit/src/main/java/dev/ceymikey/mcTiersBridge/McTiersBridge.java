@@ -70,6 +70,7 @@ public final class McTiersBridge extends JavaPlugin implements Listener {
         TypeRegistry.register("pot", Types.POT);
         TypeRegistry.register("uhc", Types.UHC);
         TypeRegistry.register("smp", Types.SMP);
+        TypeRegistry.register("nethop", Types.NETHOP);
         TypeRegistry.register("overall", Types.OVERALL);
         TypeRegistry.register("position", Types.POSITION);
         TypeRegistry.register("points", Types.POINTS);

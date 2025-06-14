@@ -70,6 +70,14 @@ public abstract class Types {
             return economy.get("tier").getAsInt();
         }
     };
+    public static Types NETHOP = new Types() {
+        @Override
+        public Object getTier(JsonObject jsonObject) {
+            JsonObject rankings = jsonObject.getAsJsonObject("rankings");
+            JsonObject economy = rankings.getAsJsonObject("nethop");
+            return economy.get("tier").getAsInt();
+        }
+    };
     public static Types OVERALL = new Types() {
         @Override
         public Object getTier(JsonObject jsonObject) {
